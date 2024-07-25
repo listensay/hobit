@@ -9,5 +9,10 @@ declare module 'vue' {
   export interface GlobalComponents {
     Greet: typeof import('./src/components/Greet.vue')['default']
     MazBtn: typeof import('maz-ui/components/MazBtn')['default']
+    MazDialog: typeof import('maz-ui/components/MazDialog')['default']
+    MazDrawer: typeof import('maz-ui/components/MazDrawer')['default']
+    MazInput: typeof import('maz-ui/components/MazInput')['default']
+    RouterLink: typeof import('vue-router')['RouterLink']
+    RouterView: typeof import('vue-router')['RouterView']
   }
 }

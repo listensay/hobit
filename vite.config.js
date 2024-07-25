@@ -1,6 +1,8 @@
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import Components from 'unplugin-vue-components/vite'
+import AutoImport from 'unplugin-auto-import/vite'
+
 import { UnpluginVueComponentsResolver, UnpluginDirectivesResolver } from 'maz-ui/resolvers'
 
 
@@ -9,12 +11,16 @@ export default defineConfig(async () => ({
   plugins: [
     vue(), 
     Components({
-    dts: true,
-    resolvers: [
-      UnpluginVueComponentsResolver(),
-      UnpluginDirectivesResolver(),
-    ],
+      dts: true,
+      resolvers: [
+        UnpluginVueComponentsResolver(),
+        UnpluginDirectivesResolver(),
+        
+      ],
     }),
+    AutoImport({
+      imports: ['vue'], dts: 'src/auto-import.d.ts'
+    })
   ],
 
   // Vite options tailored for Tauri development and only applied in `tauri dev` or `tauri build`
