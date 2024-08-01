@@ -12,6 +12,7 @@
   "dependencies": {
     "@tauri-apps/api": "^1",
     "autoprefixer": "^10.4.19",
+    "dayjs": "^1.11.12",
     "maz-ui": "^3.44.3",
     "pinia": "^2.1.7",
     "postcss": "^8.4.40",
@@ -22,6 +23,7 @@
   "devDependencies": {
     "@tauri-apps/cli": "^1",
     "@vitejs/plugin-vue": "^5.0.5",
+    "less": "^4.2.0",
     "tailwindcss": "^3.4.6",
     "unplugin-auto-import": "^0.18.2",
     "vite": "^5.3.1"
